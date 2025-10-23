@@ -21,6 +21,28 @@
     gap: 40px;
 }
 
+.navbar-search{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #f5f5f5;
+    padding: 8px 12px;
+    border-radius: 25px;
+    width: 200px;
+}
+
+.navbar-search img{
+    width: 20px;
+}
+
+.navbar-search input{
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 16px;
+    flex: 1;
+}
+
 .navbar button{
     background: transparent;
     font-size: 16px;

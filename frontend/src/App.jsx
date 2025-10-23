@@ -13,14 +13,15 @@ import MyOrders from "./pages/MyOrders/MyOrders";
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
   return (
     <>
       {showLogin ? <LoginPopup setShowLogin={setShowLogin} /> : <></>}
       <div className="app">
         <ToastContainer />
-        <Navbar setShowLogin={setShowLogin} />
+        <Navbar setShowLogin={setShowLogin} searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home searchTerm={searchTerm} setSearchTerm={setSearchTerm} />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/order" element={<PlaceOrder />} />
           <Route path="/verify" element={<Verify />} />
